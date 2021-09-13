@@ -130,6 +130,12 @@ export const globalStyles = () => css`
     border-collapse: collapse;
     border-spacing: 0;
   }
+
+  button {
+    background: #fff;
+    border: none;
+    font-family: ${props.fontFamily};
+  }
 `;
 
 export default globalStyles;
