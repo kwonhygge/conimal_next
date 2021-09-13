@@ -1,7 +1,9 @@
-import { css } from "@emotion/react";
-import reset from "react-style-reset";
+import { css } from '@emotion/react';
+import reset from 'react-style-reset';
 
-export const globalStyles = () => css`
+import { CustomThemeType } from '@/styles/theme';
+
+export const globalStyles = (props: CustomThemeType) => css`
   ${reset};
 
   * {
@@ -117,7 +119,8 @@ export const globalStyles = () => css`
   }
 
   body {
-    font-size: 1.6rem;
+    font-size: ${props.fontSizes.size16};
+    font-family: ${props.fontFamily};
     line-height: 1;
   }
 
