@@ -102,10 +102,10 @@ const Container = styled.div`
 
 const Footer = styled.footer`
     width:100%; 
-    height: 170px; 
+    height: 17rem; 
     background: ${(props)=>props.theme.colors.grey}; 
     color: ${(props)=>props.theme.colors.darkGray};
-    padding: 60px 0; 
+    padding: 6rem 0; 
     & .inner {
         width: 106rem; 
         display:flex; 
