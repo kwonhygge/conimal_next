@@ -1,13 +1,7 @@
-import "@emotion/react";
+import '@emotion/react';
 
-declare module "@emotion/react" {
-  export interface DefaultTheme {
-    colors: {
-      white: string;
-    };
+import { CustomThemeType } from '@/styles/theme';
 
-    fontSizes: {
-      size16: string;
-    };
-  }
+declare module '@emotion/react' {
+  export interface Theme extends CustomThemeType {}
 }
