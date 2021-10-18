@@ -1,8 +1,6 @@
 import styled from '@emotion/styled';
 import Link from 'next/link';
 
-import { theme } from '@/styles/theme';
-
 interface LayoutProps { children: React.ReactNode};
 
 function AppLayout(props:LayoutProps){
@@ -54,11 +52,11 @@ const Header = styled.header`
     & > .inner {
         width: 106rem;
         height: 10rem;
-        color: #002F6C;
+        color: ${(props)=>props.theme.colors.primary};
         position:relative; 
         margin: 0 auto;
         font-weight: bold; 
-        font-size: ${theme.fontSizes.size16}; 
+        font-size: ${(props)=>props.theme.fontSizes.size16}; 
         line-height: 10rem;    
     }
     & a {
@@ -105,8 +103,8 @@ const Container = styled.div`
 const Footer = styled.footer`
     width:100%; 
     height: 170px; 
-    background: #F0F0F0; 
-    color: #4f4f4f;
+    background: ${(props)=>props.theme.colors.grey}; 
+    color: ${(props)=>props.theme.colors.darkGray};
     padding: 60px 0; 
     & .inner {
         width: 106rem; 
@@ -116,7 +114,7 @@ const Footer = styled.footer`
     }
     
     & a {
-        color: #4f4f4f;
+        color: ${(props)=>props.theme.colors.darkGray};
         text-decoration: none; 
     }
 
@@ -148,7 +146,7 @@ const FooterMenu = styled.ul`
         width: 0.2rem;
         height: 1rem;
         left: 0;
-        background: #666;
+        background: ${(props)=>props.theme.colors.darkGray};
     }
 `
 
